@@ -1,0 +1,72 @@
+Sending 4 concurrent requests to Qwen/Qwen3-4B at http://127.0.0.1:30000/v1/chat/completions
+
+--- Response 1 ---
+Prompt:
+Explain KV caching in LLM inference in two concise sentences.
+
+Answer:
+KV caching, or key-value caching, is a technique used in large language model (LLM) inference to speed up the process by reusing previously computed key and value tensors during sequence generation. It allows the model to efficiently continue generating text without recomputing information from earlier tokens.
+
+--- Response 4 ---
+Prompt:
+Explain the difference between a process and a thread to a computer science student in 4-5 sentences.
+
+Answer:
+In computer science, a **process** is an instance of a program in execution, including the program code, data, and resources like memory and file handles. Each process has its own separate memory space and is managed by the operating system. A **thread**, on the other hand, is a lightweight sub-process that exists within a process and shares the same memory and resources. Threads allow for concurrent execution within the same process, making them more efficient for tasks that require close collaboration between components. While processes are heavier and more isolated, threads are lighter and can communicate more easily, making them ideal for multi-threaded applications.
+
+--- Response 2 ---
+Prompt:
+Calculate 37 × 19. Briefly explain how you got the answer.
+
+Answer:
+To calculate $ 37 \times 19 $, you can use the **distributive property** of multiplication:
+
+$$
+37 \times 19 = 37 \times (20 - 1) = (37 \times 20) - (37 \times 1)
+$$
+
+Now compute each part:
+
+- $ 37 \times 20 = 740 $
+- $ 37 \times 1 = 37 $
+
+Subtract:
+
+$$
+740 - 37 = 703
+$$
+
+**Answer: 703**
+
+--- Response 3 ---
+Prompt:
+Write a Python function that removes duplicates from a list while preserving the original order.
+
+Answer:
+Sure! Here's a Python function that removes duplicates from a list while preserving the original order:
+
+```python
+def remove_duplicates_preserve_order(lst):
+    seen = set()
+    result = []
+    for item in lst:
+        if item not in seen:
+            seen.add(item)
+            result.append(item)
+    return result
+```
+
+### Example usage:
+
+```python
+original_list = [1, 2, 2, 3, 4, 3, 5]
+unique_list = remove_duplicates_preserve_order(original_list)
+print(unique_list)  # Output: [1, 2, 3, 4, 5]
+```
+
+### Explanation:
+- `seen` is a set that keeps track of elements we've already added to the result.
+- `result` is a list that stores the unique elements in the original order.
+- The function iterates through the input list, and only adds an item to `result` if it hasn't been seen before.
+
+This approach is efficient and works well for lists of any size.
